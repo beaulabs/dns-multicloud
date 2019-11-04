@@ -223,7 +223,7 @@ This file contains all the general items such as provider blocks and the backend
     # Remote Backend Configuration:
 
     terraform {
-      required_version = ">= 0.12.0
+      required_version = ">= 0.12.0"
       backend "remote" {
         hostname     = "app.terraform.io"
         organization = "dns-multicloud-org"

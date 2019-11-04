@@ -1,10 +1,11 @@
 # General
 variable "owner" {
-  description = "Person Deploying this Stack e.g. john-doe"
+  description = "beau"
 }
 
 variable "namespace" {
   description = "Name of the zone e.g. demo"
+  default     = "beau"
 }
 
 variable "created-by" {
@@ -13,7 +14,8 @@ variable "created-by" {
 }
 
 variable "hosted-zone" {
-  description = "The name of the dns zone on Route 53 that will be used as the master zone "
+  description = "The name of the dns zone on Route 53 that will be used as the master zone"
+  default     = "hashidemos.io"
 }
 
 # AWS
@@ -21,12 +23,12 @@ variable "hosted-zone" {
 variable "create_aws_dns_zone" {
   description = "Set to true if you want to deploy the AWS delegated zone."
   type        = bool
-  default     = "false"
+  default     = "true"
 }
 
 variable "aws_region" {
   description = "The region to create resources."
-  default     = "eu-west-2"
+  default     = "us-west-1"
 }
 
 # Azure
@@ -34,12 +36,12 @@ variable "aws_region" {
 variable "create_azure_dns_zone" {
   description = "Set to true if you want to deploy the Azure delegated zone."
   type        = bool
-  default     = "false"
+  default     = "true"
 }
 
 variable "azure_location" {
   description = "The azure location to deploy the DNS service"
-  default     = "West Europe"
+  default     = "Central US"
 }
 
 # GCP
@@ -47,14 +49,15 @@ variable "azure_location" {
 variable "create_gcp_dns_zone" {
   description = "Set to true if you want to deploy the Azure delegated zone."
   type        = bool
-  default     = "false"
+  default     = "true"
 }
 
 variable "gcp_project" {
   description = "GCP project name"
+  default     = "beau-labs-1"
 }
 
 variable "gcp_region" {
   description = "GCP region, e.g. us-east1"
-  default     = "europe-west3"
+  default     = "us-central1"
 }
