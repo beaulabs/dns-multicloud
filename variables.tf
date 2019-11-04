@@ -1,6 +1,7 @@
 # General
 variable "owner" {
-  description = "beau"
+  description = "Persone deploying this stack e.g. john doe"
+  default     = "beau"
 }
 
 variable "namespace" {
